@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Contact Me</h1>
+            </div>
+        
+            <div class="banner">
+                <nav>
+                    <ul class="nav-list">
+                        <li style="order:1" class="nav-item"><a href="index.html">Home</a></li>
+                        <li style="order:1" class="nav-item"><a href="education.html">Education</a></li>
+                        <li style="order:1" class="nav-item"><a href="hobbies.html">Hobbies</a></li>
+                        <li style="order:1" class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+                        <li style="order:1" class="nav-item"><a href="resume.html">Resume</a></li>
+                        <li style="order:1" class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="logo"> 
+                    <img height="50" src="images/logo.jpg" alt="Kyle Darrow">
+                </div>
+            </div>
+        </header>
+        <!-- Reference: https://www.codingnepalweb.com/contact-us-form-in-html-and-css-free/ -->
+        <div class="sheet">
+            <div class="form">
+                <div class="detail">
+                    <div class="leftSide">
+                        <div class="phone">
+                            <i class="fa fa-phone"></i>
+                            <div class="topic">Phone</div>
+                            <div class="text">781-223-1329</div>
+                        </div>
+                        <div class="email">
+                            <i class="fa fa-envelope"></i>
+                            <div class="topic">Email</div>
+                            <div class="text">kdarrow1@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <div class="desc">I want to hear from you!</div>
+                        <p> 
+                            Fill out the form below if you just want to say hi, or have any ideas for 
+                            furture projects that might be cool to try out! Would love to hear from you!
+                        </p>
+                    <form name="feedback" action="connect.php" method="post">
+                        <div class="input-box">
+                            <input id="person" name="person" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-box">
+                            <input id="mail" name="mail" type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box message">
+                            <textarea id="mess" name="mess" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <div class="submitBtn">
+                            <input  type="Submit" value="Submit" onclick="validate()">
+                        <div id="alerts" class="alertBox"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer> 
+            <img class="shelby" src="images/shelby.png" alt="Shelby">
+            <br>
+            <br>
+            Copyright &copy; 2023 | Kyle Darrow. 
+        </footer>
+    </body>
+</html>
