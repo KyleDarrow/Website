@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kyle's Hobbies</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>My</h1>
+                <div class="animation">
+                    <div class="first"><div>Hobbies
+                    </div></div>
+                    <div class="second"><div>Sports
+                    </div></div>
+                    <div class="third"><div>Gaming
+                    </div></div>
+                </div>
+            </div>
+        
+            <div class="banner">
+                <nav>
+                    <ul class="nav-list">
+                        <li style="order:1" class="nav-item"><a href="index.html">Home</a></li>
+                        <li style="order:1" class="nav-item"><a href="education.html">Education</a></li>
+                        <li style="order:1" class="nav-item"><a href="hobbies.html">Hobbies</a></li>
+                        <li style="order:1" class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+                        <li style="order:1" class="nav-item"><a href="resume.html">Resume</a></li>
+                        <li style="order:1" class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="logo"> 
+                    <img height="50" src="images/logo.jpg" alt="Kyle Darrow">
+                </div>
+            </div>
+        </header>
+        <div id="app">
+            <div class="track">
+                <h2>Track and Field</h2>
+                <p>I have always, and will always love the sport of track and field. To keep in shape and to feel connected with the sport,
+                I still run to this day, but just don't compete. I do what I can with jumping, but keep impact at a minimal if possible
+                because too much jumping just hurts after so many years of doing it. My favorite and best event is the long jump, which
+                is the event I competed at the Olympic Trials for. Go ahead and check out my longest jump ever and my best stats! If you 
+                want to see more, check out my athletic
+                <a href="https://nuhuskies.com/sports/mens-track-and-field/roster/kyle-darrow/5023">profile</a> from college!
+                </p>
+                <button @click="toggleTable">{{text}}</button>
+                <div class="vidStats" v-if="visible">
+                <video controls src="videos/long_jump.mp4"></video>
+
+                    <table>
+                        <tr> 
+                            <th>Event</th>
+                            <th>Mark</th>
+                        </tr>
+                        <tr>
+                            <td>Long Jump</td>
+                            <td>8.10m</td>
+                        </tr>
+                        <tr>
+                            <td>100m</td>
+                            <td>10.42</td>
+                        </tr>
+                        <tr>
+                            <td>200m</td>
+                            <td>20.97</td>
+                        </tr>
+                        <tr>
+                            <td>60m</td>
+                            <td>6.81</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gaming">
+            <h2>Gaming</h2>
+            <div>
+                <p>Gaming has always been the most relaxing outlet for me outside of school work, working out, or work in general.
+                    I play many different types of games and enjoy online competitive gaming. Gaming also played a major role in
+                    my introduction to software engineering. Through games I developed an interest in game design. After learning
+                    some game design through Unreal Engine 5, I wanted to learn about how to create functionality in a game without
+                    certain assets or tools already being there for me. This is the idea that brought me where I am today. I continue
+                    to play games today and am always looking for someone to play my favorite game with, which is League of Legends.
+                    If anyone is interested, add me as a friend! Check out my profile at <a href="https://www.op.gg/summoners/na/Mogie">op.gg</a>.
+                </p>
+                
+                <table class="top-games"> 
+                    <tr>
+                        <th>Top 5 Games</th>
+                    </tr>
+                    <tr>
+                        <td><img src="https://d3kjluh73b9h9o.cloudfront.net/original/4X/d/8/9/d89b58688e2b1b0d8fc256a4cdd6a454e49ac2a2.png" alt="League Logo">  League of Legends</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-x-AhmQS1FcmBd1u27ZSKn4_oOoBfMRQh4A&usqp=CAU" alt="God of War Logo"> God of War</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://ih1.redbubble.net/image.2143024449.3084/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Bioshock Logo"> Bioshock</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://cdn.mos.cms.futurecdn.net/3ZzS2BTaMRChrrgDEDB9CM.jpg" alt="Resident Evil Logo"> Resident Evil</td>
+                    </tr>
+                    <tr>
+                        <td><img src="data:image/jpeg;base64,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" alt="Grounded Logo"> Grounded</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    <script src="script.js"></script>    
+    <footer> 
+        <img class="shelby" src="images/shelby.png" alt="Shelby">
+        <br>
+        <br>
+        Copyright &copy; 2023 | Kyle Darrow. 
+    </footer>
+    </body>
+</html>
