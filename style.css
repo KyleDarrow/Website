@@ -1,0 +1,902 @@
+
+/* Set background color and overall font */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(225, 232, 241);
+    margin: 0 auto;
+}
+
+/* 
+Header
+
+To make each page standout and I used a reference online, which cycles through 
+different key features of each page. I used a lot of the code, but changed some
+to fit my preferences.
+Reference: https://codepen.io/carloscdev/pen/mdBLmwP 
+*/
+
+.container h1 {
+  text-shadow: 0 0 7px rgba(227, 227, 228, 0.3), 0 0 3px rgba(184, 15, 15, 0.3);
+  color: black;
+  font-size: 2.8rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.container {
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid rgb(63, 90, 150);
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color:#2804f7;
+}
+
+.second div {
+  background-color:#CD921E;
+}
+
+.third div {
+  background-color:#c10528;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+header {
+  background-color: rgb(109, 160, 218);
+  margin-top: 80px;
+}
+
+/* Navigation */
+
+/* Banner where navigation buttons reside */ 
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 5px solid rgb(63, 90, 150);
+  background-color: rgba(240, 248, 255, .95);
+  height: 80px;
+  }
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+/* Put navigation list in a line */
+nav ul li {
+  display: inline-block;
+}
+
+/* reshape and color navigation buttons */
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid black;
+  background-color: aliceblue;
+  padding: 10px;
+  color: black;
+  font-size: 25px;
+  transition: background-color .5s ease;
+}
+
+/* changes color of navigation links when hovering cursor */
+nav a:hover {
+  background-color: rgb(109, 160, 218);
+  color: white;
+}
+
+.logo img{
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+/* Home page introduction */ 
+.introduction {
+  display: flex;
+  margin: 0 auto;
+  font-size: 1.35rem;
+  background-color: rgb(243, 247, 247);
+}
+
+.introduction img {
+  max-width: 370px;
+  max-height: 100%;
+  border-right: 3px solid rgb(63, 90, 150);
+}
+
+.introduction p {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.text-container {
+padding-left: 50px;
+max-width: 700px;
+}
+
+.text-container h1 {
+  text-align: left;
+  font-family: Verdana;
+  color: rgb(110, 110, 110);
+  border-bottom: 8px solid rgb(63, 90, 150);
+  padding-bottom: 20px;
+}
+
+.quickContact {
+  color: gray;
+  font-size: .8rem;
+}
+
+.quickContact a:hover {
+  color: black;
+}
+
+.quickContact p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.quickContact img{
+  width: 20px;
+  border-right: none
+}
+
+/* Content */
+
+.main {
+  display: flex;
+  margin: 0 auto;
+  background-color: rgb(224, 224, 224);
+  font-size: 1.35rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}        
+
+.content {
+  max-width: 500px;
+}
+
+.content h2 {
+  color: rgb(48, 113, 211);
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.content p {
+  flex: 1;
+  line-height: 1.5;
+  max-width: 550px;
+  padding-right: 75px;
+}
+
+/* Reference: https://www.youtube.com/watch?v=0wvrlOyGlq0 */
+.slider {
+  width: 375px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 375px;
+  height: 500px;
+}
+
+/* manual navigation of carousel */
+.manualNav {
+  position: absolute;
+  width: 375px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgb(48, 113, 211);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: rgb(48, 113, 211);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* auto navigation of carousel */
+.autoNav {
+  position: absolute;
+  display: flex;
+  width: 375px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.autoNav div { 
+  border: 2px solid rgb(48, 113, 211);
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.autoNav div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .autoNav .auto-btn1 {
+  background-color: rgb(48, 113, 211);
+}
+
+#radio2:checked ~ .autoNav .auto-btn2 {
+  background-color: rgb(48, 113, 211);
+}
+
+#radio3:checked ~ .autoNav .auto-btn3 {
+  background-color: rgb(48, 113, 211);
+}
+
+#radio4:checked ~ .autoNav .auto-btn4 {
+  background-color: rgb(48, 113, 211);
+}
+
+/* Content on Education page. */
+.neu {
+  padding: 20px;
+  background: linear-gradient(to right, white, red);
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.neu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.neu h2{
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.neu p {
+  max-width: 600px;
+  margin: 50px;
+}
+
+.neu img{
+  border-radius: 50%;
+  width: 300px;
+  margin: auto;
+}
+
+.athletics {
+  padding: 20px;
+  background: linear-gradient(to right, red, white, blue);
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-top: 3px solid black;
+}
+
+.athletics h2{
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.athletics p {
+  max-width: 600px;
+  margin: 50px;
+}
+
+.athletics img{
+  width: 600px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.masters {
+  padding: 20px;
+  background: linear-gradient(to right, red, white, black);
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-top: 3px solid black;
+}
+
+.masters h2{
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.masters p {
+  max-width: 600px;
+  margin: 50px;
+}
+
+.masters img{
+  width: 300px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* Content on Hobbies page. */
+
+.track {
+  background: linear-gradient(to right, red, white, blue);
+  padding: 20px;
+  font-size: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 3px solid black;
+}
+
+.track a {
+  color: green;
+  text-decoration: none
+}
+
+.track h2 {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+.track p {
+  max-width: 800px;
+}
+
+.track video {
+  width: 800px;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.vidStats {
+  display: flex;
+}
+
+/* Create table for track and field marks */
+.vidStats table{
+  width: fit-content;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+/* Segments aspects of table */
+.vidStats th,
+.vidStats td {
+  border: 2px solid black;
+  padding: 8px;
+  width: 50%;
+}
+
+/* Separates headings in table from rows by highlighting. */
+.vidStats th{
+  background-color: rgb(109, 160, 218);
+  color: white;
+}
+
+.vidStats td {
+  background-color: rgb(219, 216, 216);
+  color: black;
+}
+
+.track button {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  
+  color: white;
+  background-color: rgb(109, 160, 218);
+}
+
+.track button:hover {
+  transition: .3s ease-out;
+  background-color: rgb(35, 118, 212);
+  cursor: pointer;
+}
+
+.gaming {
+  position: relative;
+  margin: auto;
+  font-size: 1.35rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black
+}
+
+.gaming h2 {
+  text-decoration: underline;
+}
+
+.gaming a {
+  color: black;
+  text-decoration: none;
+}
+
+.gaming a:hover {
+  color: rgb(78, 78, 78)
+}
+
+.gaming::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(https://assets-prd.ignimgs.com/2022/12/21/top100games-2021-blogroll-1671593544336.jpg?crop=16%3A9&width=888) no-repeat;
+  background-size: cover;
+  opacity: 0.3; 
+  z-index: -1;
+}
+
+.gaming p {
+  max-width: 800px;
+}
+
+/* Create a table for my top games */
+.gaming table{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  border-bottom: 2px solid black;
+  background: white;
+}
+
+/* Only creates border for heading */
+.top-games th{
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(253, 17, 17);
+  padding: 10px;
+}
+
+.top-games td {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.top-games img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+/* Removes bullets from list items */
+ul {
+  list-style: none;
+  padding-right: 60px;
+}
+
+/* Portfolio page */
+
+.portIntro {
+  margin: 0 auto;
+  font-size: 1.35rem;
+  max-width: 800px;
+  padding-top: 5px;
+}
+
+.samples {
+  border: 5px solid black;
+  border-radius: 20px;
+  font-size: 1.35rem;
+  margin: 0 auto;
+  width: 800px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://t4.ftcdn.net/jpg/01/71/44/87/360_F_171448726_suYMaoyGeJe0uDqJDMDoGBOayWJRXZjG.jpg"); 
+}
+
+.samples h2 {
+  text-align: center;
+  border: 3px solid black;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  background-color: rgb(209, 207, 207);
+  border-radius: 10px 10px 0px 0px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.samples p {
+  border: 2px solid black;
+  color: white;
+  background-color: rgb(77, 130, 211);
+  border-bottom: none;
+  border-top: none;
+  margin: 0 auto;
+  width: 180px;
+  padding: 10px;
+}
+
+.samples button {
+  border: 2px solid black;
+  border-radius: 0px 0px 10px 10px;
+  width: 204px;
+  margin-left: 1px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.samples button:hover {
+  background-color: #e0ac44;
+}
+
+/* Creates "Skills" section of the webpage */
+.list-title {
+  font-size: 1.35rem;
+  text-align: center;
+  color: navy;
+  background-color: rgb(206, 207, 198);
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.list-title h3 {
+  padding-top: 10px;
+  font-size: 2.5rem;
+}
+
+/* Puts github link in the top right of my "Skills" section. */
+.github-link {
+  font-size: .9rem;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  text-align: center;
+}
+
+.github-link button {
+  background: rgb(81, 178, 211);
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+}
+
+.github-link button:hover {
+  background: black;
+  color: white;
+}
+
+/* Sets the font size of the items in the "Skills" section and organizes them in columns. */
+.list-item {
+  font-size: 1.35rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* Changes color of the items in "Skills". */
+.list-item > li {
+  padding-right: 80px;
+  padding-left: 80px;
+  color: rgb(13,126,255);
+}
+
+/* Changes the color of the sub-items in "Skills". */
+.list-item ul li {
+  font-size: 1rem;
+  color: navy;
+}
+
+/* Resume page */
+.resume {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+/* Contact Me page */
+
+/* Reference: https://www.codingnepalweb.com/contact-us-form-in-html-and-css-free/ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.sheet {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: #c8e8e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  max-width: 1100px;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form .detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form .detail .leftSide{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.detail .leftSide::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+
+.detail .leftSide .phone {
+  margin: 14px;
+  text-align: center;
+}
+
+.detail .leftSide .email {
+  margin: 14px;
+  text-align: center;
+}
+
+.detail .leftSide .phone i{
+  font-size: 30px;
+  color: rgb(109, 160, 218);
+  margin-bottom: 10px;
+}
+
+.detail .leftSide .email i{
+  font-size: 30px;
+  color: rgb(109, 160, 218);
+  margin-bottom: 10px;
+}
+
+.detail .leftSide .phone .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detail .leftSide .email .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detail .leftSide .phone .text{
+  font-size: 14px;
+  color: #afafb6;
+}
+
+.detail .leftSide .email .text{
+  font-size: 14px;
+  color: #afafb6;
+}
+
+.form .detail .rightSide{
+  width: 75%;
+  margin-left: 75px;
+}
+
+.rightSide .desc{
+  justify-content: center;
+  display: flex;
+  padding-top: 30px;
+  font-size: 23px;
+  font-weight: 600;
+  color: rgb(109, 160, 218);
+}
+
+.rightSide .input-box{
+  height: 55px;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.rightSide .input-box input,
+.rightSide .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.rightSide .message{
+  min-height: 110px;
+}
+
+.rightSide .message textarea::placeholder{
+  font-family: "Poppins", sans-serif;
+}
+
+.rightSide .input-box textarea{
+  padding-top: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+.rightSide .submitBtn{
+  display: inline-block;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.rightSide .submitBtn input[type="Submit"]{
+  color: white;
+  font-size: 18px;
+  outline: none;
+  border: 2px solid black;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgb(109, 160, 218);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn input[type="Submit"]:hover{
+  background: rgb(42, 122, 214);
+  color: white;
+}
+
+.alertBox {
+  width: 400px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alertBox.show {
+  display: block;
+  margin-bottom: 95px;
+  width: 700px;
+}
+
+/* Footer */
+footer {
+  padding-top: 15px;
+  text-align: center;
+  background-color: rgb(17, 81, 155);
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.shelby {
+  border-radius: 50%;
+  width: 5%;
+}
