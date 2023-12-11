@@ -12,19 +12,19 @@ function imageSlider() {
 }
 
 function gitClick() {
-    window.location.href = "https://github.com/KyleDarrow?tab=projects";
+    window.open("https://github.com/KyleDarrow?tab=repositories", "_blank");
 }
 
 function process() {
-    window.location.href = "https://github.com/KyleDarrow/ProcessScheduling";
+    window.open("https://github.com/KyleDarrow/ProcessScheduling", "_blank");
 }
 
 function para() {
-    window.location.href = "https://github.com/KyleDarrow/Parasocial";
+    window.open("https://github.com/KyleDarrow/Parasocial", "_blank");
 }
 
 function flight() {
-    window.location.href = "https://github.com/KyleDarrow/ShortestFlight";
+    window.open("https://github.com/KyleDarrow/ShortestFlight", "_blank");
 }
 
 function validate() {
