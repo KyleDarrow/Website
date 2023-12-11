@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kyle's Biography</title>
+        <link rel="icon" href="kd_final_01_Qqq_icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="script.js"></script>
+    </head>
+        <header>
+            <div class="container">
+                    <h1>Hey, I'm</h1>
+                    <div class="animation">
+                        <div class="first"><div>Kyle Darrow
+                        </div></div>
+                        <div class="second"><div>Web Developer
+                        </div></div>
+                        <div class="third"><div>Software Engineer
+                        </div></div>
+                    </div>
+                </div>
+            <div class="banner">
+                <nav>
+                    <ul class="nav-list">
+                        <li style="order:1" class="nav-item"><a href="index.html">Home</a></li>
+                        <li style="order:1" class="nav-item"><a href="education.html">Education</a></li>
+                        <li style="order:1" class="nav-item"><a href="hobbies.html">Hobbies</a></li>
+                        <li style="order:1" class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+                        <li style="order:1" class="nav-item"><a href="resume.html">Resume</a></li>
+                        <li style="order:1" class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="logo"> 
+                    <img height="50" src="images/logo.jpg" alt="Kyle Darrow">
+                </div>
+            </div>
+        </header>
+
+        <div class="introduction">
+            <img src="images/IMG_0571.PNG" alt="Kyle Darrow">
+            <div class="text-container">
+                <h1>KYLE DARROW</h1>            
+                    <div class="quickContact">
+                        <p>
+                            <i class="fa fa-phone"></i><i> 781-223-1329</i>
+                            <br>
+                            <a href="mailto:kdarrow1@gmail.com">
+                            <i class="fa fa-envelope"></i> kdarrow1@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                
+                <p> Hi everyone! I am a retired professional athlete in track in field who now has his eyes set on building
+                a career in software engineering. After competing the 2021 Olympic Trials, I decided to focus my efforts in
+                a new field, which is how I started my journey into software. <br><br>I am currently working on my masters at 
+                Boston University, on a course to finish by summer of 2024! Within my website you can find everything
+                about me from my life, my work, and my hobbies. I hope you find something interesting don't hesitate 
+                to reach out, as I am currently looking for work with my new skills in software engineering and web development!
+                </p>
+            </div>
+
+        </div>
+        <div class="main">
+            <div class="content">
+                <h2>My Personal Life</h2>
+                <p>I am 28 years old and I grew up and am currently living in Canton, Massachusetts. I have my Bachelors 
+                    of Science in Biology from Northeastern University. I have been with my girlfriend Abby for 8 years and we own 
+                    4 beutiful puppies Mogie, Jayce, Winston,and Levi. The picture below shows me and Winston, the toughtest pup in 
+                    the crew. I am the middle child in a family of 6, having my older brother and sister who are twins, and my younger sister. 
+                </p>
+            </div>
+            <!-- Reference: https://www.youtube.com/watch?v=0wvrlOyGlq0 -->
+            <div class="slider">
+                <div class="slides">
+                    <!-- Create buttons for image slider -->
+                    <input type="radio" name="radio-btn" id="radio1" checked>
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slide first">
+                        <img src="images/IMG_4511.jpg" alt="My puppy Winston">
+                    </div>
+                    <div class="slide">
+                        <img src="images/IMG_9905.jpg" alt="My Girlfriend">
+                    </div>
+                    <div class="slide">
+                        <img src="images/IMG_0399.png" alt="My puppy Levi">
+                    </div>
+                    <div class="slide">
+                        <img src="images/IMG_2594.jpeg" alt="Halloween with Mogie">
+                    </div>
+                    
+                    <div class="autoNav">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+                <div class="manualNav">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+        </div>    
+        <footer> 
+            <img class="shelby" src="images/shelby.png" alt="Shelby">
+            <br>
+            <br>
+            Copyright &copy; 2023 | Kyle Darrow. 
+        </footer>
+        <script>
+            window.onload = function (){
+                imageSlider();
+            };
+        </script>
+    </body>
+</html>
