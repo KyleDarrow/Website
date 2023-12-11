@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>My</h1>
+                <div class="animation">
+                    <div class="first"><div>Portfolio
+                    </div></div>
+                    <div class="second"><div>Projects
+                    </div></div>
+                    <div class="third"><div>Skills
+                    </div></div>
+                </div>
+            </div>
+
+            <div class="banner">
+                <nav>
+                    <ul class="nav-list">
+                        <li style="order:1" class="nav-item"><a href="index.html">Home</a></li>
+                        <li style="order:1" class="nav-item"><a href="education.html">Education</a></li>
+                        <li style="order:1" class="nav-item"><a href="hobbies.html">Hobbies</a></li>
+                        <li style="order:1" class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+                        <li style="order:1" class="nav-item"><a href="resume.html">Resume</a></li>
+                        <li style="order:1" class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="github-link">
+                    <img height="50" src="https://foundations.projectpythia.org/_images/GitHub-logo.png" alt="Github">
+                    <br>
+                    <button onclick="gitClick()">Projects</button>
+                </div>
+                <div class="logo"> 
+                    <img height="50" src="images/logo.jpg" alt="Kyle Darrow">
+                </div>
+            </div>
+        </header>
+        <div class="portIntro">
+            <p> 
+                Below is a description of a few of the projects I have done throughout my studies
+                and the skills I have been learning and developing throughout my time in my masters
+                program. These projects are my favorites and took a lot work.If you want, you can 
+                look at more projects and get a better understanding of my progression through my 
+                Github page, which is located at the top right of the page.
+            </p>
+        </div>
+        <div class="samples">
+            <div class="process">
+                <h2>Process Scheduling</h2>
+                <p> 
+                    Uses a heap adaptable priority queue to create a simulated work environment
+                    that executes processes based on their priority and updating process left 
+                    waiting in the queue for too long. 
+                </p>
+                <button onclick="process()"><i class="fa fa-github"></i></button>
+            </div>
+            <div class="para">
+                <h2>Parasocial</h2>
+                <p>
+                    This is a theorized application that I created a database for using SQL. All
+                    work regarding setup, physical ERD, data visualization, and query executions
+                    is contained within the word document provide through my Github. 
+                </p>
+                <button onclick="para()"><i class="fa fa-github"></i></button>
+            </div>
+            <div class="flight">
+                <h2>Shortest Flight</h2>
+                <p> 
+                    Uses Dijkstras algorithm to find the shortest path between two points. In
+                    this example, the algorithm is used to find the cheapest path based on 
+                    different connecting flights and their costs.
+                </p>
+                <button onclick="flight()"><i class="fa fa-github"></i></button>
+            </div>
+        </div>
+        <div class="list-title">
+            <h3>Skills</h3>
+            <ol class="list-item">
+                <li><u>Programming Languages</u>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Blueprints</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li><u>Technology</u>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Vue</li>
+                        
+                    </ul>
+                </li>
+                <li><u>Tools</u>
+                    <ul>
+                        <li>IntelliJ IDEA</li>
+                        <li>VS Code</li>
+                        <li>Pycharm</li>
+                        <li>Unreal Engine 5</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    <footer> 
+        <img class="shelby" src="images/shelby.png" alt="Shelby">
+        <br>
+        <br>
+        Copyright &copy; 2023 | Kyle Darrow. 
+    </footer>
+    </body>
+</html>
